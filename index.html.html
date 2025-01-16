@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* General Styles */
+      body {
+        padding: 0;
+        margin: 0;
+        background: #1a1a2e; /* Darkest color from palette */
+        color: #f9f9f9; /* Lightest color */
+        font-family: Roboto, sans-serif;
+        line-height: 1.6;
+        animation: fadeIn 1s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        background: #16213e; /* Second darkest color */
+        color: #f9f9f9;
+        padding: 20px;
+        animation: slideIn 1s ease-in-out;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .hero img {
+        height: 150px;
+        width: 150px;
+        margin: 15px;
+        border: 2px solid #f9f9f9; /* Light border */
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .p {
+        background-color: #373737;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .info {
+        background-color: #0f3460;
+        text-align: center;
+        padding: 20px;
+        text-transform: uppercase;
+      }
+
+      hr {
+        border: 0.5px solid #e94560; /* Vibrant Pink */
+        margin: 20px 0;
+      }
+
+      /* Gallery Styles */
+      .gallery {
+        background-color: #1a1a2e;
+        padding: 19px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .gallery img {
+        max-width: 100%;
+        height: 180px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease-in-out;
+        border: 2px solid #0f3460; /* Accent Blue */
+      }
+
+      .gallery img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero {
+          padding: 15px;
+        }
+
+        .hero img {
+          height: 120px;
+          width: 120px;
+        }
+
+        .p,
+        .info {
+          padding: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero img {
+          height: 100px;
+          width: 100px;
+        }
+
+        .p p,
+        .info p {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <img
+        src="https://scontent.fkhi28-1.fna.fbcdn.net/v/t39.30808-6/472330946_559259096941368_7281104065772181563_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=3PyD_dFhOtoQ7kNvgGhP_fw&_nc_oc=Adjv0FqdrMfbtWk4d3sgomirWfjhQR5rM-essrYw5JhhnD2LIcEmDxSVm9oJyjN-OTE&_nc_zt=23&_nc_ht=scontent.fkhi28-1.fna&_nc_gid=AWVXueykMSo7W9Hg9ldwybC&oh=00_AYCwRqvTC3WJO1KYV3pMBeaRDfdYWNj3E856E_Ci_MBmJA&oe=678D4481"
+        alt="Saqib Farhan"
+      />
+      <h1>Saqib Farhan</h1>
+    </div>
+    <div class="p">
+      <h1 style="text-align: center">ABOUT</h1>
+      <p>
+        "I'm Saqib, a 17-year-old talented graphics designer and programmer. I'm
+        driven to revolutionize the digital world with my creative skills and
+        technical expertise. With passion and dedication, I've established
+        myself as an expert in graphics designing and programming. I excel at
+        creating innovative ideas and solutions that impress my clients and
+        audience. Despite my young age, my skills and knowledge have earned me a
+        promising reputation in my field."
+      </p>
+    </div>
+
+    <div class="info">
+      <h1>Skills</h1>
+      <p>
+        PROGRAMMING
+        <br />
+        Graphics Designing
+        <br />
+        Python
+        <br />
+        JavaScript
+        <br />
+        Dart
+        <br />
+        UI/UX DESIGN
+        <br>
+        VIDEO EDITING
+      </p>
+    </div>
+
+    <h1 style="text-align: center">THUMBNAILS</h1>
+    <div class="gallery">
+      <img
+        src="https://scontent.fkhi28-1.fna.fbcdn.net/v/t39.30808-6/473751365_567886162745328_6572021152534183673_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=l8WEmQ3s3DsQ7kNvgGhDFTn&_nc_oc=AdiiLgtQidtjk2JpI0hL_Yqma69A_7uQNesKTYYa1pVf4oLZdqwJoh5oma-9vp4ujVY&_nc_zt=23&_nc_ht=scontent.fkhi28-1.fna&_nc_gid=A_iQGqLUbwbVX1LqwtgthnH&oh=00_AYC9ZuYfsYvCr_TtX0V4KuUKWRtSZDIrVvyd5STLDi5ncw&oe=678C3C97"
+        alt="Image 1"
+      />
+      <img
+        src="https://scontent.fkhi28-1.fna.fbcdn.net/v/t39.30808-6/473238213_567886199411991_1954739050550587313_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=PS9tpxh7-w8Q7kNvgFvvNje&_nc_oc=AdhnUDruB6pob_mj00LfkXQ2gGuRXGyDIoxSv13CayhMjZLdV01L834EpKNTNS4t9Ks&_nc_zt=23&_nc_ht=scontent.fkhi28-1.fna&_nc_gid=AzvapkjB_GK9L-o32d1gVRn&oh=00_AYBNYWa5dOs71FZkb5hnIZDaM1Nva5h62TsCDD3djbpMFQ&oe=678C36DB"
+        alt="Image 2"
+      />
+      <img
+        src="https://scontent.fkhi28-1.fna.fbcdn.net/v/t39.30808-6/473556026_567886192745325_7522649191153099590_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=FhKCKhlzIPsQ7kNvgHRvJ1o&_nc_oc=AdjN-_B1jo-NxHqDMtiOJ9h-zj7d3lMzPqu0eIL2E2vdSDvOs-O32WLOAOGBNVLhIHg&_nc_zt=23&_nc_ht=scontent.fkhi28-1.fna&_nc_gid=AhrnHESO6__BtWvMCngLNCq&oh=00_AYB6RAyLFTVO9X2XqZt-qwCqveHWp6XgmWHszqIWTVgenw&oe=678C3E07"
+        alt="Image 3"
+      />
+      <img
+        src="https://scontent.fkhi28-1.fna.fbcdn.net/v/t39.30808-6/473340968_567886236078654_1080208730517764198_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=cBI_QUGDgHgQ7kNvgH6f-GG&_nc_oc=AdgV2AdOyBm_zoOPUW1AL-WiGQejrmuwt85BrORha9GbT4vzCtQMjc_ZJ0EOsSzm_Ag&_nc_zt=23&_nc_ht=scontent.fkhi28-1.fna&_nc_gid=AOtpV_dF7SIeWi7WM83o8JG&oh=00_AYB4OZX6WUhcFlC0yuWQ2-vMVe2wyESSP5-dR6wSz1HDqw&oe=678C495A"
+        alt="Image 4"
+      />
+    </div>
+    <h1 style="text-align: center">POSTERS</h1>
+    <div class="gallery">
+      <img
+        src="https://img.freepik.com/free-psd/club-dj-party-flyer-social-media-post_505751-6651.jpg?uid=R111351219&ga=GA1.1.1761895984.1726989638&semt=ais_hybrid"
+        alt="Image 1"
+      />
+      <img
+        src="https://img.freepik.com/free-psd/club-dj-party-flyer-social-media-post_505751-6654.jpg?uid=R111351219&ga=GA1.1.1761895984.1726989638&semt=ais_hybrid"
+        alt="Image 2"
+      />
+      <img
+        src="https://img.freepik.com/free-psd/club-dj-party-flyer-social-media-post_505751-6835.jpg?uid=R111351219&ga=GA1.1.1761895984.1726989638&semt=ais_hybrid"
+        alt="Image 3"
+      />
+      <img
+        src="https://img.freepik.com/free-psd/club-dj-party-flyer-social-media-post_505751-6659.jpg?uid=R111351219&ga=GA1.1.1761895984.1726989638&semt=ais_hybrid"
+        alt="Image 4"
+      />
+    </div>
+    <h1 style="text-align: center">BANNERS</h1>
+    <div class="gallery">
+      <img
+        src="https://img.freepik.com/free-vector/black-white-business-banner-with-orange-details_1409-62.jpg?uid=R111351219&ga=GA1.1.1761895984.1726989638&semt=ais_hybrid"
+        alt="Image 1"
+      />
+      <img
+        src="https://img.freepik.com/free-vector/india-independence-day-sale-banners-with-flat-design_23-2147840112.jpg?uid=R111351219&ga=GA1.1.1761895984.1726989638&semt=ais_hybrid"
+        alt="Image 2"
+      />
+      <img
+        src="https://img.freepik.com/premium-vector/modern-web-banner-template_95007-35.jpg?uid=R111351219&ga=GA1.1.1761895984.1726989638&semt=ais_hybrid"
+        alt="Image 3"
+      />
+      <img
+        src="https://img.freepik.com/free-vector/gradient-wavy-cyber-monday-horizontal-banners-set_52683-72530.jpg?uid=R111351219&ga=GA1.1.1761895984.1726989638&semt=ais_hybrid"
+        alt="Image 4"
+      />
+    </div>
+  </body>
+</html>
